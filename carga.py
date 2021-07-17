@@ -66,10 +66,6 @@ def process_dimensional_table(cur, conn, df, spark):
         .distinct()
     )
     execute_sql(cur, conn, df_lp, linguagem_programacao_table_insert, "linguagem_programacao")
-
-def iterate(cur, conn, df, table):
-    cur.execute(table, list(df))
-    conn.commit()
         
 def process_fact_table(cur, conn, df, spark):
     
