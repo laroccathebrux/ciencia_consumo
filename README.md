@@ -31,3 +31,30 @@ Como resultado desta etapa deve ser entregue um Jupyter Notebook com as resposta
 ### Modelo ER Banco de Dados 
 ![ER, Modelagem Postgres](er.png)
 ![ER, Tabela Postgres](table.png)
+
+### Lista de arquivos:
+**Datasets**
+- base_de_conhecimento.csv
+- base_de_respostas_10k_amostra.csv
+**Arquivos Python**
+- sql_queries.py
+Possui todas as queries necessárias para a criação do banco de dados 
+- create_tables.py
+Possui a lógica para fazer o DROP e CREATE das tabelas
+- carga.py
+Arquivo que faz o ETL dos dados e salva no banco de dados
+**Arquivo Jupyter Notebook**
+- Questions.ipynb
+Arquivo que responde as perguntas do desafio
+
+### Tecnologias utilizadas
+As seguintes tecnologias foram usadas para a elaboração deste desafio:
+- AWS Cloud9
+- Python3
+- Pyspark
+- Postgres Rodando em Cloud em elephantsql.com
+- Google Colab para criação do arquivos Questions.ipynb
+
+### Instruções para execução
+- python3 create_tables.py
+- python3 carga.py
