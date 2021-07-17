@@ -107,7 +107,7 @@ def process_fact_table(cur, conn, df, spark):
         .withColumn("OpenSource", f.when(f.col("OpenSource") == "Yes", "1").otherwise("0"))
         .withColumn("Hobby", f.when(f.col("Hobby") == "Yes", "1").otherwise("0"))
         .withColumn("ConvertedSalary", df_rp.ConvertedSalary.cast(DoubleType()))
-        .withColumn("ConvertedSalary", (f.col("ConvertedSalary") / 5.6))
+        .withColumn("ConvertedSalary", (f.col("ConvertedSalary") * 5.6))
         .withColumn("salario", f.round(f.col("ConvertedSalary"),2))
     )
     df_rp = df_rp.withColumn("contrib_open_source", df_rp.OpenSource.cast(IntegerType()))
