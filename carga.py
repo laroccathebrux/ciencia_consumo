@@ -6,13 +6,7 @@ from pyspark.sql.types import DoubleType
 from pyspark.sql.window import Window
 from pyspark.sql.functions import row_number
 import psycopg2
-import psycopg2.extras as p
 from sql_queries import *
-
-from io import StringIO
-import os
-import glob
-import pandas as pd
 
 def execute_sql(cur, conn, df, table, table_name):
     try:

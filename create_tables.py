@@ -4,21 +4,9 @@ from sql_queries import create_table_queries, drop_table_queries
 
 def create_database():
     """
-    - Creates and connects to the sparkifydb
-    - Returns the connection and cursor to sparkifydb
+    - Creates and connects to the database
+    - Returns the connection and cursor to database
     """
-    
-    # connect to default database
-    #conn = psycopg2.connect("host=batyr.db.elephantsql.com dbname=hzlsgeqq user=hzlsgeqq password=1WQIBn7f0j5d9J-p88FDlXXCgNzg9CnG")
-    #conn.set_session(autocommit=True)
-    #cur = conn.cursor()
-    
-    # create ciencia_consumo database with UTF8 encoding
-    #cur.execute("DROP DATABASE IF EXISTS ciencia_consumo")
-    #cur.execute("CREATE DATABASE ciencia_consumo WITH ENCODING 'utf8' TEMPLATE template0")
-
-    # close connection to default database
-    #conn.close()    
     
     # connect to sparkify database
     conn = psycopg2.connect("host=batyr.db.elephantsql.com dbname=hzlsgeqq user=hzlsgeqq password=1WQIBn7f0j5d9J-p88FDlXXCgNzg9CnG")
@@ -47,9 +35,9 @@ def create_tables(cur, conn):
 
 def main():
     """
-    - Drops (if exists) and Creates the sparkify database. 
+    - Drops (if exists) and Creates the database. 
     
-    - Establishes connection with the sparkify database and gets
+    - Establishes connection with the database and gets
     cursor to it.  
     
     - Drops all the tables.  
