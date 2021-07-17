@@ -8,7 +8,7 @@ def create_database():
     - Returns the connection and cursor to database
     """
     
-    # connect to sparkify database
+    # connect to database
     conn = psycopg2.connect("host=batyr.db.elephantsql.com dbname=hzlsgeqq user=hzlsgeqq password=")
     cur = conn.cursor()
     
