@@ -155,11 +155,6 @@ def process_other_table(cur, conn, df, spark):
     df_rst_lp = spark.createDataFrame(rst, ["linguagem_programacao_id", "LanguageWorkedWith_list"])
     df_rst_lp.na.drop()
     
-    cur.execute("Select id, nome from respondente order by nome ASC")
-    rst = cur.fetchall()
-    df_rst_rp = spark.createDataFrame(rst, ["respondente_id", "nome"])
-    df_rst_rp.na.drop()
-    
     df_rul = df.select("LanguageWorkedWith", "id")
     df_rul = (
             df_rul
