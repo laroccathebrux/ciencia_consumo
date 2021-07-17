@@ -205,7 +205,7 @@ def main():
     Connects to the database and processes data
     :rtype: object
     """
-    conn = psycopg2.connect("host=batyr.db.elephantsql.com dbname=hzlsgeqq user=hzlsgeqq password=1WQIBn7f0j5d9J-p88FDlXXCgNzg9CnG")
+    conn = psycopg2.connect("host=batyr.db.elephantsql.com dbname=hzlsgeqq user=hzlsgeqq password=")
     cur = conn.cursor()
     
     spark = (
