@@ -36,6 +36,7 @@ Como resultado desta etapa deve ser entregue um Jupyter Notebook com as resposta
 **Datasets**
 - base_de_conhecimento.csv
 - base_de_respostas_10k_amostra.csv
+
 **Arquivos Python**
 - sql_queries.py
 Possui todas as queries necessárias para a criação do banco de dados 
@@ -43,6 +44,7 @@ Possui todas as queries necessárias para a criação do banco de dados
 Possui a lógica para fazer o DROP e CREATE das tabelas
 - carga.py
 Arquivo que faz o ETL dos dados e salva no banco de dados
+
 **Arquivo Jupyter Notebook**
 - Questions.ipynb
 Arquivo que responde as perguntas do desafio
