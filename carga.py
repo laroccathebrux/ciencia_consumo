@@ -10,9 +10,8 @@ from sql_queries import *
 
 def execute_sql(cur, conn, df, table, table_name):
     try:
-        for row in df.rdd.collect():
-            cur.execute(table, list(row))
-            conn.commit()
+        extras.execute_batch(cur, table, list(df.rdd.collect()))
+        conn.commit()
         print("Table "+table_name+" "+str(df.count())+" lines Inserted")
     except ValueError as e:
         print(e)
