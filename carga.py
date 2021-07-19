@@ -194,7 +194,6 @@ def process_data(cur, conn, spark, func):
     spec = Window.partitionBy().orderBy("OpenSource")
     df = df.withColumn("id",  row_number().over(spec))
     df = df.withColumn("id", f.concat(f.lit('respondente_'),f.col('id')))
-    df.count()
     
     func(cur, conn, df, spark)
 
